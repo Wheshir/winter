@@ -1,0 +1,2046 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<title>Winter Arc — A Better Version of You</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #090909;
+  --surface: #101010;
+  --surface-2: #151515;
+  --line: #292929;
+  --muted: #85817c;
+  --text: #e6e0d8;
+  --white: #f4f0e9;
+  --accent: #c4b7a3;
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Manrope", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, select { font: inherit; }
+button { color: inherit; }
+button, a, input, select { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible, input:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 4px;
+}
+
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; }
+img { display: block; width: 100%; object-fit: cover; }
+
+::selection { background: #c4b7a3; color: #090909; }
+
+.container {
+  width: min(1120px, calc(100% - 72px));
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: var(--accent);
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin: 0;
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -.5px;
+}
+
+.section-desc {
+  max-width: 420px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.9;
+}
+
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.head-note {
+  max-width: 210px;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.8;
+  text-align: right;
+}
+
+/* HEADER */
+
+.site-header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 0;
+  border-bottom: 1px solid #ffffff12;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  font-family: var(--serif);
+  font-size: 22px;
+  letter-spacing: -1px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav a {
+  color: #b5b0a8;
+  font-size: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color .2s;
+}
+
+
+:root {
+    --bg: #090909;
+    --card: #101010;
+    --card-hover: #151515;
+    --border: rgba(220, 220, 210, 0.15);
+    --text: #e8e5df;
+    --muted: #85847
+.nav a:hover { color: var(--white); }
+
+.header-date {
+  color: #a6a098;
+  font-size: 8px;
+  letter-spacing: 1.4px;
+  text-align: right;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background: #141616;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, #09090950 0%, #09090940 30%, #090909c9 83%, #090909 100%),
+    linear-gradient(90deg, #09090966, transparent 45%, #09090955),
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2200&q=85") center 47% / cover;
+  transform: scale(1.02);
+  animation: heroReveal 1.2s ease both;
+}
+
+@keyframes heroReveal {
+  from { opacity: .55; transform: scale(1.06); }
+  to { opacity: 1; transform: scale(1.02); }
+}
+
+.hero-side {
+  position: absolute;
+  top: 125px;
+  color: #d1cbc2;
+  font-size: 8px;
+  line-height: 1.9;
+  letter-spacing: 1px;
+}
+
+.hero-side.left {
+  left: max(36px, calc((100% - 1120px) / 2));
+  font-family: var(--serif);
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.05;
+}
+
+.hero-side.right {
+  right: max(36px, calc((100% - 1120px) / 2));
+  text-align: right;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(900px, calc(100% - 36px));
+  padding-top: 65px;
+  text-align: center;
+}
+
+.hero-kicker {
+  margin-bottom: 14px;
+  color: #d2c8bb;
+  font-size: 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  color: #f2eee7;
+  font-family: var(--serif);
+  font-size: clamp(65px, 12.5vw, 150px);
+  font-weight: 400;
+  line-height: .9;
+  letter-spacing: -5px;
+}
+
+.hero-subtitle {
+  margin: 20px 0 0;
+  color: #d2cbc1;
+  font-size: 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin: 48px auto 25px;
+}
+
+.hero-stat {
+  min-width: 105px;
+  padding: 0 20px;
+  border-right: 1px solid #ffffff2e;
+}
+
+.hero-stat:last-child { border-right: 0; }
+
+.hero-stat strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.hero-stat span {
+  color: #c0b8ad;
+  font-size: 7px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.outline-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 39px;
+  padding: 0 19px;
+  border: 1px solid #c8bdae70;
+  background: #0a0a0a20;
+  color: #e5ddd1;
+  font-size: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background .2s, color .2s;
+}
+
+.outline-button:hover {
+  background: var(--white);
+  color: #111;
+}
+
+.hero-bottom {
+  position: absolute;
+  right: 36px;
+  bottom: 20px;
+  left: 36px;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff7a;
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+
+/* INTRO */
+
+.intro {
+  padding: 75px 0 80px;
+  border-bottom: 1px solid var(--line);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.intro h2 {
+  max-width: 550px;
+  margin: 0;
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: clamp(36px, 4.5vw, 51px);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.intro-copy {
+  color: #aaa49b;
+  font-size: 10px;
+  line-height: 2;
+}
+
+.intro-copy p { margin: 0 0 13px; }
+
+.intro-note {
+  margin-top: 20px;
+  padding-left: 13px;
+  border-left: 1px solid var(--accent);
+  color: #d2c8ba;
+}
+
+/* GOALS */
+
+.goals-section {
+  padding: 70px 0 80px;
+  border-bottom: 1px solid var(--line);
+}
+
+.goal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.goal-card {
+  min-width: 0;
+  padding: 23px 20px 17px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: background .2s;
+}
+
+.goal-card:hover { background: #ffffff03; }
+
+.goal-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 27px;
+}
+
+.goal-icon {
+  color: #c3b9aa;
+  font-family: var(--serif);
+  font-size: 20px;
+}
+
+.goal-number {
+  color: #777169;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.goal-card h3 {
+  margin: 0 0 5px;
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.goal-subtitle {
+  margin: 0 0 17px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.goal-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.goal-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #c6c0b7;
+  font-size: 9px;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.goal-row input {
+  flex: 0 0 11px;
+  width: 11px;
+  height: 11px;
+  margin: 2px 0 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.goal-row span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.goal-row input:checked + span {
+  color: #77736c;
+  text-decoration: line-through;
+}
+
+.goal-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid #ffffff10;
+}
+
+.goal-card-footer span {
+  color: #8c867d;
+  font-size: 8px;
+}
+
+.goal-add {
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--accent);
+  font-size: 16px;
+  transition: background .2s;
+}
+
+.goal-add:hover { background: #ffffff0b; }
+
+.goal-progress-track {
+  width: 100%;
+  height: 2px;
+  margin-top: 13px;
+  background: #292929;
+}
+
+.goal-progress-fill {
+  width: 0;
+  height: 100%;
+  background: #b7aa97;
+  transition: width .25s;
+}
+
+.custom-goal-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.custom-goal-form select,
+.custom-goal-form input {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  outline: none;
+  background: #101010;
+  color: var(--text);
+  font-size: 9px;
+}
+
+.custom-goal-form select { max-width: 130px; }
+.custom-goal-form input { flex: 1; }
+.custom-goal-form input:focus { border-color: #777064; }
+
+.small-button {
+  padding: 9px 13px;
+  border: 1px solid #756b5e;
+  background: transparent;
+  color: var(--text);
+  font-size: 9px;
+}
+
+.small-button:hover { background: #ffffff0a; }
+
+/* PROGRESS */
+
+.progress-section {
+  padding: 75px 0 70px;
+  border-bottom: 1px solid var(--line);
+}
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 16px;
+}
+
+.surface {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: #0e0e0e;
+}
+
+.surface-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.surface-label {
+  color: #9a9184;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.surface h3 {
+  margin: 8px 0 0;
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.subtle {
+  color: var(--muted);
+  font-size: 8px;
+}
+
+.progress-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 0 24px;
+}
+
+.progress-circle {
+  --p: 0%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 106px;
+  height: 106px;
+  border-radius: 50%;
+  background: conic-gradient(#c8b9a5 var(--p), #343434 var(--p));
+}
+
+.progress-circle::before {
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: #0e0e0e;
+  content: "";
+}
+
+.progress-circle-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.progress-circle strong {
+  display: block;
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.progress-circle span {
+  color: var(--muted);
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+
+.progress-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  border-top: 1px solid var(--line);
+}
+
+.metric {
+  padding: 16px 6px 0;
+  text-align: center;
+}
+
+.metric + .metric { border-left: 1px solid var(--line); }
+
+.metric strong {
+  display: block;
+  margin-bottom: 5px;
+  font-family: var(--serif);
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.metric span {
+  color: var(--muted);
+  font-size: 8px;
+}
+
+.progress-footnote {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.daily-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.daily-row {
+  display: grid;
+  grid-template-columns: 35px 1fr 16px;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0;
+  border-bottom: 1px solid #ffffff12;
+}
+
+.daily-row:last-child { border-bottom: 0; }
+
+.daily-row-number {
+  color: #7f786e;
+  font-size: 8px;
+}
+
+.daily-row label {
+  color: #c9c2b8;
+  font-size: 9px;
+  line-height: 1.7;
+  cursor: pointer;
+}
+
+.daily-row label:has(input:checked) {
+  color: #81796d;
+  text-decoration: line-through;
+}
+
+.daily-row input {
+  width: 11px;
+  height: 11px;
+  margin: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.daily-row .delete-button {
+  opacity: 0;
+  border: 0;
+  background: transparent;
+  color: #9b7e72;
+  font-size: 14px;
+}
+
+.daily-row:hover .delete-button,
+.daily-row .delete-button:focus-visible { opacity: 1; }
+
+.add-task-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.add-task-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  outline: none;
+  background: #090909;
+  color: var(--text);
+  font-size: 9px;
+}
+
+.add-task-form input:focus { border-color: #756b5e; }
+
+/* HABIT TRACKER */
+
+.habit-section {
+  padding: 70px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.habit-box {
+  padding: 23px;
+  border: 1px solid var(--line);
+  background: #101010;
+}
+
+.habit-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.habit-controls input[type="date"] {
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  background: #0a0a0a;
+  color: var(--text);
+  color-scheme: dark;
+  font-size: 9px;
+}
+
+.habit-table-wrap {
+  overflow-x: auto;
+  scrollbar-color: #46413a #101010;
+}
+
+.habit-table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.habit-table th,
+.habit-table td {
+  padding: 13px 10px;
+  border-bottom: 1px solid #ffffff12;
+  text-align: center;
+  font-size: 8px;
+}
+
+.habit-table th {
+  color: #928a7e;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.habit-table th:first-child,
+.habit-table td:first-child {
+  width: 190px;
+  text-align: left;
+}
+
+.habit-table td:first-child {
+  color: #d1c9be;
+  white-space: normal;
+  line-height: 1.7;
+}
+
+.habit-table input[type="checkbox"] {
+  width: 12px;
+  height: 12px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.habit-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 22px;
+}
+
+.habit-summary {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.habit-summary strong {
+  color: var(--text);
+  font-weight: 400;
+}
+
+.habit-add-form {
+  display: flex;
+  gap: 8px;
+}
+
+.habit-add-form input {
+  width: min(230px, 45vw);
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  outline: none;
+  background: #090909;
+  color: var(--text);
+  font-size: 9px;
+}
+
+/* STAGES */
+
+.stages-section {
+  padding: 70px 0 75px;
+  border-bottom: 1px solid var(--line);
+}
+
+.stages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.stage-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #111;
+}
+
+.stage-image {
+  position: relative;
+  height: 165px;
+  overflow: hidden;
+  background: #222;
+}
+
+.stage-image img {
+  height: 100%;
+  opacity: .78;
+  filter: saturate(.55) brightness(.75);
+  transition: transform .6s, opacity .3s;
+}
+
+.stage-card:hover .stage-image img {
+  transform: scale(1.04);
+  opacity: .95;
+}
+
+.stage-image::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, #111b 100%);
+  content: "";
+}
+
+.stage-image-number {
+  position: absolute;
+  z-index: 1;
+  bottom: 13px;
+  left: 15px;
+  color: #e5ded3;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+
+.stage-body { padding: 19px; }
+
+.stage-phase {
+  margin: 0 0 9px;
+  color: #9a8c79;
+  font-size: 8px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.stage-body h3 {
+  margin: 0 0 9px;
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.stage-body > p:not(.stage-phase) {
+  min-height: 35px;
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.8;
+}
+
+.stage-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 15px;
+  border-top: 1px solid #ffffff12;
+}
+
+.stage-checklist label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #b5aea4;
+  font-size: 9px;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.stage-checklist input {
+  width: 11px;
+  height: 11px;
+  flex: 0 0 11px;
+  margin: 2px 0 0;
+  accent-color: var(--accent);
+}
+
+.stage-checklist input:checked + span {
+  color: #777067;
+  text-decoration: line-through;
+}
+
+.stage-progress {
+  height: 2px;
+  margin-top: 18px;
+  background: #292929;
+}
+
+.stage-progress div {
+  width: 0;
+  height: 100%;
+  background: #b8a993;
+  transition: width .25s;
+}
+
+/* QUOTE / FOOTER */
+
+.closing {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 300px;
+  padding: 60px 24px;
+  overflow: hidden;
+  text-align: center;
+  background:
+    linear-gradient(#0909099c, #090909c9),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=80") center 55% / cover;
+}
+
+.closing h2 {
+  margin: 0;
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: clamp(37px, 5.5vw, 60px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.closing p {
+  margin: 17px 0 22px;
+  color: #bcb5aa;
+  font-size: 9px;
+  line-height: 1.9;
+}
+
+.footer {
+  padding: 23px 0;
+  border-top: 1px solid var(--line);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.footer-brand {
+  font-family: var(--serif);
+  font-size: 20px;
+}
+
+.footer-note {
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.footer-actions {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-actions button {
+  padding: 5px 0;
+  border: 0;
+  background: transparent;
+  color: #9d9589;
+  font-size: 8px;
+}
+
+.footer-actions button:hover { color: var(--white); }
+
+.toast {
+  position: fixed;
+  z-index: 50;
+  right: 22px;
+  bottom: 22px;
+  max-width: calc(100vw - 44px);
+  padding: 13px 17px;
+  border: 1px solid #454038;
+  background: #151412;
+  color: var(--white);
+  font-size: 10px;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity .2s, transform .2s;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.empty-state {
+  padding: 20px 0;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+@media (max-width: 800px) {
+  .container { width: calc(100% - 40px); }
+  .nav { gap: 13px; }
+  .nav a { font-size: 7px; }
+  .hero { min-height: 550px; }
+  .hero h1 { letter-spacing: -3px; }
+  .hero-side.left { left: 20px; }
+  .hero-side.right { right: 20px; }
+  .intro-grid { gap: 30px; }
+  .goal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .progress-grid { grid-template-columns: 1fr; }
+  .stages-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stage-image { height: 145px; }
+}
+
+@media (max-width: 520px) {
+  .container { width: calc(100% - 32px); }
+  .site-header { padding: 18px 0; }
+  .header-inner { flex-wrap: wrap; }
+  .nav { order: 3; width: 100%; justify-content: space-between; }
+  .header-date { font-size: 7px; }
+  .hero { min-height: 570px; }
+  .hero-content { padding-top: 45px; }
+  .hero h1 { font-size: clamp(52px, 14vw, 76px); letter-spacing: -2px; }
+  .hero-kicker { font-size: 7px; letter-spacing: 2px; }
+  .hero-subtitle { font-size: 7px; letter-spacing: 1.6px; line-height: 1.9; }
+  .hero-side { top: 110px; }
+  .hero-side.left { font-size: 13px; }
+  .hero-side.right { font-size: 7px; }
+  .hero-stats { margin-top: 39px; }
+  .hero-stat { min-width: 0; width: 33.333%; padding: 0 9px; }
+  .hero-stat strong { font-size: 22px; }
+  .hero-stat span { font-size: 6px; letter-spacing: .5px; }
+  .hero-bottom { right: 16px; left: 16px; font-size: 6px; }
+  .intro { padding: 55px 0; }
+  .intro-grid { grid-template-columns: 1fr; gap: 25px; }
+  .intro h2 { font-size: 39px; }
+  .section-head { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .head-note { max-width: none; text-align: left; }
+  .goals-section, .progress-section, .habit-section, .stages-section { padding: 55px 0; }
+  .goal-grid { grid-template-columns: 1fr; }
+  .goal-card { padding: 20px 17px; }
+  .goal-card-top { margin-bottom: 18px; }
+  .custom-goal-form { flex-wrap: wrap; }
+  .custom-goal-form select { max-width: none; width: 100%; }
+  .custom-goal-form input { min-width: 0; }
+  .surface { padding: 18px 15px; }
+  .habit-box { padding: 15px 12px; }
+  .habit-controls { align-items: flex-start; flex-direction: column; }
+  .habit-table th, .habit-table td { padding: 12px 9px; }
+  .habit-table th:first-child, .habit-table td:first-child { min-width: 135px; }
+  .habit-bottom { align-items: stretch; flex-direction: column; }
+  .habit-add-form input { width: 100%; }
+  .stages-grid { grid-template-columns: 1fr; gap: 17px; }
+  .stage-image { height: 190px; }
+  .stage-body { padding: 18px; }
+  .stage-body > p:not(.stage-phase) { min-height: 0; }
+  .closing { min-height: 280px; }
+  .footer-inner { flex-wrap: wrap; }
+  .footer-note { order: 3; width: 100%; text-align: left; }
+  .footer-actions { gap: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+</style>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="brand">WA.</a>
+
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#goals">Направления</a>
+      <a href="#progress">Прогресс</a>
+      <a href="#habits">Привычки</a>
+      <a href="#stages">Этапы</a>
+    </nav>
+
+    <div class="header-date" id="headerDate">WINTER ARC / 2026</div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-bg"></div>
+
+    <div class="hero-side left">
+      A better<br>version of you
+    </div>
+
+    <div class="hero-side right">
+      DISCIPLINE.<br>
+      EXPERIENCE.<br>
+      GROWTH.
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-kicker">A NEW CHAPTER OF YOUR LIFE</div>
+      <h1>WINTER ARC</h1>
+      <p class="hero-subtitle">01 OCTOBER 2026 — 28 FEBRUARY 2027</p>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong id="daysPassed">0</strong>
+          <span>дней на пути</span>
+        </div>
+        <div class="hero-stat">
+          <strong id="daysLeft">0</strong>
+          <span>дней осталось</span>
+        </div>
+        <div class="hero-stat">
+          <strong id="heroPercent">0%</strong>
+          <span>выполнено сегодня</span>
+        </div>
+      </div>
+
+      <a href="#goals" class="outline-button">Начать свой путь <span>↘</span></a>
+    </div>
+
+    <div class="hero-bottom">
+      <span>YOUR OWN PACE</span>
+      <span>NO PERFECT DAYS REQUIRED</span>
+      <span>WINTER ARC / 01</span>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="container intro-grid">
+      <div>
+        <p class="eyebrow">01 / THE MAIN IDEA</p>
+        <h2>Не нужно менять<br>всю жизнь за один день.</h2>
+      </div>
+
+      <div class="intro-copy">
+        <p>Winter Arc — это время, когда ты перестаёшь ждать подходящего момента и начинаешь работать над собой в реальности.</p>
+        <p>Без необходимости быть идеальной. Без гонки за чужими результатами. Только твои цели, твои привычки и последовательные действия.</p>
+        <p class="intro-note">Твоя задача — не стать другим человеком за ночь. Твоя задача — не бросать себя.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="goals-section" id="goals">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">02 / YOUR PERSONAL SYSTEM</p>
+          <h2 class="section-title">Работа над собой</h2>
+        </div>
+        <div class="head-note">Выбери направления, которые важны именно тебе. Меняй список под свои задачи.</div>
+      </div>
+
+      <div class="goal-grid" id="goalGrid"></div>
+
+      <form class="custom-goal-form" id="goalForm">
+        <select id="goalCategory" aria-label="Направление цели">
+          <option value="body">Тело</option>
+          <option value="mind">Разум</option>
+          <option value="career">Карьера</option>
+          <option value="finance">Финансы</option>
+          <option value="lifestyle">Образ жизни</option>
+        </select>
+        <input id="goalInput" type="text" maxlength="140"
+               placeholder="Добавить свою цель..." required>
+        <button class="small-button" type="submit">Добавить +</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="progress-section" id="progress">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">03 / CONSISTENCY OVER PERFECTION</p>
+          <h2 class="section-title">Твой прогресс</h2>
+          <p class="section-desc">Выбирай день и отмечай выполненные задачи. Все отметки сохраняются отдельно по датам.</p>
+        </div>
+        <div class="head-note">Прогресс считается автоматически на основе выполненных ежедневных задач.</div>
+      </div>
+
+      <div class="progress-grid">
+        <article class="surface">
+          <div class="surface-head">
+            <div>
+              <div class="surface-label">YOUR DAILY RESULT</div>
+              <h3 id="progressHeading">Сегодня</h3>
+            </div>
+            <span class="subtle" id="progressDateLabel"></span>
+          </div>
+
+          <div class="progress-center">
+            <div class="progress-circle" id="progressCircle">
+              <div class="progress-circle-inner">
+                <strong id="progressPercent">0%</strong>
+                <span>COMPLETED</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="progress-metrics">
+            <div class="metric">
+              <strong id="completedCount">0</strong>
+              <span>Выполнено</span>
+            </div>
+            <div class="metric">
+              <strong id="totalCount">0</strong>
+              <span>Всего задач</span>
+            </div>
+          </div>
+
+          <p class="progress-footnote" id="progressMessage">Начни с одного небольшого шага.</p>
+        </article>
+
+        <article class="surface">
+          <div class="surface-head">
+            <div>
+              <div class="surface-label">DAILY ACTIONS</div>
+              <h3>Задачи на день</h3>
+            </div>
+            <input type="date" id="taskDate" aria-label="Дата задач"
+                   style="max-width:145px;padding:8px;background:#090909;color:#e6e0d8;border:1px solid #292929;font-size:9px;color-scheme:dark">
+          </div>
+
+          <div class="daily-list" id="dailyList"></div>
+
+          <form class="add-task-form" id="dailyForm">
+            <input id="dailyInput" type="text" maxlength="140"
+                   placeholder="Добавить задачу на день..." required>
+            <button class="small-button" type="submit">Добавить +</button>
+          </form>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="habit-section" id="habits">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">04 / REPEAT UNTIL IT BECOMES YOU</p>
+          <h2 class="section-title">Трекер привычек</h2>
+          <p class="section-desc">Отмечай привычки каждый день. При смене даты ты увидишь сохранённые отметки другого дня.</p>
+        </div>
+        <div class="head-note">Последовательность важнее идеальной серии без пропусков.</div>
+      </div>
+
+      <div class="habit-box">
+        <div class="habit-controls">
+          <div>
+            <div class="surface-label">YOUR HABIT LOG</div>
+            <div style="margin-top:7px;color:#cfc7bc;font-family:var(--serif);font-size:24px">
+              Мой ежедневный ритм
+            </div>
+          </div>
+          <input type="date" id="habitDate" aria-label="Дата трекера привычек">
+        </div>
+
+        <div class="habit-table-wrap">
+          <table class="habit-table">
+            <thead>
+              <tr>
+                <th>Привычка</th>
+                <th>ПН</th><th>ВТ</th><th>СР</th><th>ЧТ</th>
+                <th>ПТ</th><th>СБ</th><th>ВС</th>
+                <th>НЕДЕЛЯ</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="habitTableBody"></tbody>
+          </table>
+        </div>
+
+        <div class="habit-bottom">
+          <div class="habit-summary" id="habitSummary">Выполнено за неделю: <strong>0%</strong></div>
+          <form class="habit-add-form" id="habitForm">
+            <input id="habitInput" type="text" maxlength="100"
+                   placeholder="Новая привычка..." required>
+            <button class="small-button" type="submit">Добавить +</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stages-section" id="stages">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">05 / YOUR TRANSFORMATION</p>
+          <h2 class="section-title">Шесть этапов</h2>
+          <p class="section-desc">Раздели большой путь на понятные этапы. Отмечай действия по мере выполнения.</p>
+        </div>
+        <div class="head-note">Это ориентир, а не строгий график. Продолжительность каждого этапа можно менять под себя.</div>
+      </div>
+
+      <div class="stages-grid" id="stagesGrid"></div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div>
+      <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+      <h2>Ты ещё не знаешь,<br>на что способна.</h2>
+      <p>Но можешь узнать. Один день за другим.</p>
+      <a href="#goals" class="outline-button">Продолжить свой путь <span>↗</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <a class="footer-brand" href="#">WA.</a>
+    <div class="footer-note">WINTER ARC — YOUR OWN PACE</div>
+    <div class="footer-actions">
+      <button id="exportData" type="button">Экспорт данных</button>
+      <button id="resetData" type="button">Сбросить</button>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+  "use strict";
+
+  const STORAGE_KEY = "winterArc_reference_v1";
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+  const today = () => {
+    const d = new Date();
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  };
+
+  const makeId = () => "id_" + Date.now().toString(36) + "_" + Math.random().toString(36).slice(2, 8);
+
+  const categoryDefaults = [
+    {
+      id: "body",
+      title: "ТЕЛО",
+      subtitle: "Физическое состояние",
+      icon: "↗",
+      tasks: [
+        "Тренироваться регулярно",
+        "Питаться сбалансированно",
+        "Соблюдать режим сна",
+        "Пить достаточно воды",
+        "Добавить растяжку"
+      ]
+    },
+    {
+      id: "mind",
+      title: "РАЗУМ",
+      subtitle: "Знания и внутренний баланс",
+      icon: "⌁",
+      tasks: [
+        "Читать каждый день",
+        "Изучать новое",
+        "Практиковать медитацию",
+        "Вести дневник мыслей",
+        "Меньше времени в телефоне"
+      ]
+    },
+    {
+      id: "career",
+      title: "КАРЬЕРА",
+      subtitle: "Профессиональное развитие",
+      icon: "▤",
+      tasks: [
+        "Работать над проектом",
+        "Изучать новые навыки",
+        "Обновлять портфолио",
+        "Планировать рабочую неделю",
+        "Практиковаться регулярно"
+      ]
+    },
+    {
+      id: "finance",
+      title: "ФИНАНСЫ",
+      subtitle: "Осознанное отношение к деньгам",
+      icon: "◎",
+      tasks: [
+        "Вести учёт расходов",
+        "Откладывать часть дохода",
+        "Изучать финансовую грамотность",
+        "Планировать покупки"
+      ]
+    },
+    {
+      id: "lifestyle",
+      title: "ОБРАЗ ЖИЗНИ",
+      subtitle: "Качество повседневной жизни",
+      icon: "✳",
+      tasks: [
+        "Уделять время себе",
+        "Поддерживать порядок",
+        "Проводить время на природе",
+        "Развивать личный стиль",
+        "Планировать отдых"
+      ]
+    }
+  ];
+
+  const dailyDefaults = [
+    "Сделать одно главное дело",
+    "Выделить время на движение",
+    "Уделить время обучению",
+    "Привести пространство в порядок",
+    "Записать итоги дня"
+  ];
+
+  const habitDefaults = [
+    { id: "water", title: "Пить достаточно воды" },
+    { id: "movement", title: "Движение / тренировка" },
+    { id: "reading", title: "Читать 10 страниц" },
+    { id: "sleep", title: "Лечь спать вовремя" }
+  ];
+
+  const stageDefaults = [
+    {
+      id: "foundation",
+      number: "01",
+      phase: "OCTOBER",
+      title: "Фундамент",
+      description: "Наведи порядок в базовых вещах и создай опору.",
+      image: "photo-1448375240586-882707db888b",
+      tasks: ["Определить главные цели", "Наладить режим сна", "Составить простой план"]
+    },
+    {
+      id: "level",
+      number: "02",
+      phase: "NOVEMBER",
+      title: "Новый уровень",
+      description: "Переводи намерения в регулярные действия.",
+      image: "photo-1441974231531-c6227db76b6e",
+      tasks: ["Закрепить полезные привычки", "Продолжить обучение", "Следить за регулярностью"]
+    },
+    {
+      id: "growth",
+      number: "03",
+      phase: "DECEMBER",
+      title: "Развитие",
+      description: "Укрепляй то, что уже работает, и пробуй новое.",
+      image: "photo-1464822759023-fed622ff2c3b",
+      tasks: ["Освоить новый навык", "Пересмотреть свои цели", "Отметить личный рост"]
+    },
+    {
+      id: "result",
+      number: "04",
+      phase: "JANUARY",
+      title: "Результат",
+      description: "Заметь изменения и доведи важные дела до конца.",
+      image: "photo-1517299321609-52687d1bc55a",
+      tasks: ["Завершить важный проект", "Оценить результаты", "Скорректировать план"]
+    },
+    {
+      id: "recovery",
+      number: "05",
+      phase: "FEBRUARY",
+      title: "Перезагрузка",
+      description: "Оставь лишнее и восстанови силы перед новым циклом.",
+      image: "photo-1454496522488-7a8e488e8606",
+      tasks: ["Убрать лишние обязательства", "Уделить время отдыху", "Подвести итоги"]
+    },
+    {
+      id: "newself",
+      number: "06",
+      phase: "THE NEXT CHAPTER",
+      title: "Новая версия",
+      description: "Сохрани работающие привычки и выбери следующий ориентир.",
+      image: "photo-1472396961693-142e6e269027",
+      tasks: ["Записать свои изменения", "Выбрать новые цели", "Составить следующий план"]
+    }
+  ];
+
+  function createInitialState() {
+    return {
+      categories: categoryDefaults.map(category => ({
+        ...category,
+        tasks: category.tasks.map((title, index) => ({
+          id: `${category.id}_${index + 1}`,
+          title
+        }))
+      })),
+      dailyTasks: dailyDefaults.map((title, index) => ({
+        id: `daily_${index + 1}`,
+        title
+      })),
+      habits: habitDefaults.map(item => ({ ...item })),
+      stages: stageDefaults.map(stage => ({
+        ...stage,
+        tasks: stage.tasks.map((title, index) => ({
+          id: `${stage.id}_${index + 1}`,
+          title
+        }))
+      })),
+      dailyChecks: {},
+      habitChecks: {},
+      stageChecks: {},
+      goalChecks: {}
+    };
+  }
+
+  function loadState() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (!saved) return createInitialState();
+
+      const parsed = JSON.parse(saved);
+      const defaults = createInitialState();
+
+      return {
+        ...defaults,
+        ...parsed,
+        categories: Array.isArray(parsed.categories) ? parsed.categories : defaults.categories,
+        dailyTasks: Array.isArray(parsed.dailyTasks) ? parsed.dailyTasks : defaults.dailyTasks,
+        habits: Array.isArray(parsed.habits) ? parsed.habits : defaults.habits,
+        stages: Array.isArray(parsed.stages) ? parsed.stages : defaults.stages,
+        dailyChecks: parsed.dailyChecks || {},
+        habitChecks: parsed.habitChecks || {},
+        stageChecks: parsed.stageChecks || {},
+        goalChecks: parsed.goalChecks || {}
+      };
+    } catch (error) {
+      console.error("Не удалось загрузить сохранённые данные:", error);
+      return createInitialState();
+    }
+  }
+
+  let state = loadState();
+  let selectedDate = today();
+  let toastTimeout = null;
+
+  function saveState() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      return true;
+    } catch (error) {
+      console.error("Не удалось сохранить данные:", error);
+      toast("Не удалось сохранить данные. Возможно, хранилище браузера заполнено.");
+      return false;
+    }
+  }
+
+  function escapeHTML(value) {
+    return String(value).replace(/[&<>"']/g, char => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;"
+    })[char]);
+  }
+
+  function toast(message) {
+    const element = $("#toast");
+    element.textContent = message;
+    element.classList.add("show");
+    clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(() => element.classList.remove("show"), 2500);
+  }
+
+  function dayChecks(date = selectedDate) {
+    state.dailyChecks[date] ||= {};
+    return state.dailyChecks[date];
+  }
+
+  function getMonday(dateString) {
+    const date = new Date(`${dateString}T12:00:00`);
+    const day = (date.getDay() + 6) % 7;
+    date.setDate(date.getDate() - day);
+    return date;
+  }
+
+  function addDays(dateString, amount) {
+    const date = new Date(`${dateString}T12:00:00`);
+    date.setDate(date.getDate() + amount);
+    return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+  }
+
+  function weekDates(dateString) {
+    const monday = getMonday(dateString);
+    const start = `${monday.getFullYear()}-${String(monday.getMonth() + 1).padStart(2, "0")}-${String(monday.getDate()).padStart(2, "0")}`;
+    return Array.from({ length: 7 }, (_, index) => addDays(start, index));
+  }
+
+  function isChecked(store, date, id) {
+    return Boolean(store[date] && store[date][id]);
+  }
+
+  function checkboxHTML(type, id, checked, label) {
+    return `<label class="goal-row">
+      <input type="checkbox" data-check-type="${type}" data-check-id="${escapeHTML(id)}" ${checked ? "checked" : ""}>
+      <span>${escapeHTML(label)}</span>
+    </label>`;
+  }
+
+  /* GOAL CARDS */
+
+  function renderGoals() {
+    const grid = $("#goalGrid");
+
+    grid.innerHTML = state.categories.map((category, categoryIndex) => {
+      const checks = state.goalChecks[category.id] || {};
+      const completed = category.tasks.filter(task => checks[task.id]).length;
+      const total = category.tasks.length;
+      const percent = total ? Math.round(completed / total * 100) : 0;
+
+      const rows = category.tasks.map(task => {
+        return checkboxHTML("goal", `${category.id}::${task.id}`, Boolean(checks[task.id]), task.title);
+      }).join("");
+
+      return `
+        <article class="goal-card" data-category="${escapeHTML(category.id)}">
+          <div class="goal-card-top">
+            <span class="goal-number">0${categoryIndex + 1}</span>
+            <span class="goal-icon">${escapeHTML(category.icon || "✳")}</span>
+          </div>
+          <h3>${escapeHTML(category.title)}</h3>
+          <p class="goal-subtitle">${escapeHTML(category.subtitle || "Твои личные цели")}</p>
+          <div class="goal-items">${rows || '<p class="subtle">Добавь первую цель ниже.</p>'}</div>
+          <div class="goal-card-footer">
+            <span>${completed} / ${total} выполнено</span>
+            <button class="goal-add" type="button" data-add-to-category="${escapeHTML(category.id)}" aria-label="Добавить цель">+</button>
+          </div>
+          <div class="goal-progress-track"><div class="goal-progress-fill" style="width:${percent}%"></div></div>
+        </article>`;
+    }).join("");
+  }
+
+  function addGoal(categoryId, title) {
+    const category = state.categories.find(item => item.id === categoryId);
+    if (!category) return;
+
+    category.tasks.push({ id: makeId(), title });
+    saveState();
+    renderGoals();
+    updateProgress();
+    toast("Цель добавлена.");
+  }
+
+  $("#goalForm").addEventListener("submit", event => {
+    event.preventDefault();
+    const input = $("#goalInput");
+    const title = input.value.trim();
+    if (!title) return input.focus();
+
+    addGoal($("#goalCategory").value, title);
+    input.value = "";
+    input.focus();
+  });
+
+  $("#goalGrid").addEventListener("click", event => {
+    const button = event.target.closest("[data-add-to-category]");
+    if (!button) return;
+
+    const categoryId = button.dataset.addToCategory;
+    const category = state.categories.find(item => item.id === categoryId);
+    if (!category) return;
+
+    const title = prompt(`Новая цель — ${category.title.toLowerCase()}:`);
+    if (title && title.trim()) addGoal(categoryId, title.trim());
+  });
+
+  /* DAILY TASKS */
+
+  function renderDailyTasks() {
+    const checks = dayChecks();
+
+    $("#dailyList").innerHTML = state.dailyTasks.map((task, index) => `
+      <div class="daily-row">
+        <span class="daily-row-number">${String(index + 1).padStart(2, "0")}</span>
+        <label>
+          <input type="checkbox" data-daily-id="${escapeHTML(task.id)}" ${checks[task.id] ? "checked" : ""}>
+          ${escapeHTML(task.title)}
+        </label>
+        <button class="delete-button" type="button" data-delete-daily="${escapeHTML(task.id)}" aria-label="Удалить задачу">×</button>
+      </div>
+    `).join("") || '<div class="empty-state">На этот день пока нет задач. Добавь первую ниже.</div>';
+
+    updateProgress();
+  }
+
+  $("#dailyForm").addEventListener("submit", event => {
+    event.preventDefault();
+    const input = $("#dailyInput");
+    const title = input.value.trim();
+    if (!title) return input.focus();
+
+    const task = { id: makeId(), title };
+    state.dailyTasks.push(task);
+    saveState();
+    renderDailyTasks();
+    input.value = "";
+    input.focus();
+    toast("Задача добавлена.");
+  });
+
+  $("#dailyList").addEventListener("click", event => {
+    const button = event.target.closest("[data-delete-daily]");
+    if (!button) return;
+
+    const id = button.dataset.deleteDaily;
+    const task = state.dailyTasks.find(item => item.id === id);
+    if (!task) return;
+
+    if (!confirm(`Удалить задачу «${task.title}»?`)) return;
+
+    state.dailyTasks = state.dailyTasks.filter(item => item.id !== id);
+    Object.values(state.dailyChecks).forEach(checks => delete checks[id]);
+
+    saveState();
+    renderDailyTasks();
+    toast("Задача удалена.");
+  });
+
+  $("#taskDate").value = selectedDate;
+
+  $("#taskDate").addEventListener("change", event => {
+    if (!event.target.value) {
+      event.target.value = selectedDate;
+      return;
+    }
+
+    selectedDate = event.target.value;
+    $("#habitDate").value = selectedDate;
+    renderDailyTasks();
+    renderHabitTracker();
+    updateProgress();
+  });
+
+  /* CHECKBOX HANDLER */
+
+  document.addEventListener("change", event => {
+    const checkbox = event.target;
+    if (!(checkbox instanceof HTMLInputElement) || checkbox.type !== "checkbox") return;
+
+    if (checkbox.dataset.checkType === "goal") {
+      const [categoryId, taskId] = checkbox.dataset.checkId.split("::");
+      state.goalChecks[categoryId] ||= {};
+      state.goalChecks[categoryId][taskId] = checkbox.checked;
+      saveState();
+      renderGoals();
+      updateProgress();
+      return;
+    }
+
+    if (checkbox.dataset.dailyId) {
+      dayChecks()[checkbox.dataset.dailyId] = checkbox.checked;
+      saveState();
+      updateProgress();
+      return;
+    }
+
+    if (checkbox.dataset.habitId) {
+      const date = checkbox.dataset.habitDate;
+      const habitId = checkbox.dataset.habitId;
+      state.habitChecks[date] ||= {};
+      state.habitChecks[date][habitId] = checkbox.checked;
+      saveState();
+      renderHabitTracker();
+      updateProgress();
+      return;
+    }
+
+    if (checkbox.dataset.stageId) {
+      const [stageId, taskId] = checkbox.dataset.stageId.split("::");
+      state.stageChecks[stageId] ||= {};
+      state.stageChecks[stageId][taskId] = checkbox.checked;
+      saveState();
+      renderStages();
+      updateProgress();
+    }
+  });
+
+  /* HABIT TRACKER */
+
+  function renderHabitTracker() {
+    const dates = weekDates(selectedDate);
+    const body = $("#habitTableBody");
+
+    body.innerHTML = state.habits.map(habit => {
+      const checks = dates.map(date => {
+        const checked = isChecked(state.habitChecks, date, habit.id);
+        return `<td><input type="checkbox" aria-label="${escapeHTML(habit.title)} — ${date}" data-habit-id="${escapeHTML(habit.id)}" data-habit-date="${date}" ${checked ? "checked" : ""}></td>`;
+      }).join("");
+
+      const completed = dates.filter(date => isChecked(state.habitChecks, date, habit.id)).length;
+
+      return `<tr>
+        <td>${escapeHTML(habit.title)}</td>
+        ${checks}
+        <td>${completed}/7</td>
+        <td><button type="button" class="delete-button" data-delete-habit="${escapeHTML(habit.id)}" aria-label="Удалить привычку">×</button></td>
+      </tr>`;
+    }).join("") || '<tr><td colspan="10">Добавь привычку, чтобы начать отслеживание.</td></tr>';
+
+    const total = state.habits.length * 7;
+    const completed = state.habits.reduce((sum, habit) =>
+      sum + dates.filter(date => isChecked(state.habitChecks, date, habit.id)).length, 0);
+
+    const percent = total ? Math.round(completed / total * 100) : 0;
+    $("#habitSummary").innerHTML = `Выполнено за неделю: <strong>${percent}%</strong> (${completed}/${total})`;
+  }
+
+  $("#habitDate").value = selectedDate;
+
+  $("#habitDate").addEventListener("change", event => {
+    if (!event.target.value) {
+      event.target.value = selectedDate;
+      return;
+    }
+
+    selectedDate = event.target.value;
+    $("#taskDate").value = selectedDate;
+    renderDailyTasks();
+    renderHabitTracker();
+    updateProgress();
+  });
+
+  $("#habitForm").addEventListener("submit", event => {
+    event.preventDefault();
+    const input = $("#habitInput");
+    const title = input.value.trim();
+    if (!title) return input.focus();
+
+    state.habits.push({ id: makeId(), title });
+    saveState();
+    renderHabitTracker();
+    input.value = "";
+    input.focus();
+    toast("Привычка добавлена.");
+  });
+
+  $("#habitTableBody").addEventListener("click", event => {
+    const button = event.target.closest("[data-delete-habit]");
+    if (!button) return;
+
+    const id = button.dataset.deleteHabit;
+    const habit = state.habits.find(item => item.id === id);
+    if (!habit) return;
+
+    if (!confirm(`Удалить привычку «${habit.title}» и её историю?`)) return;
+
+    state.habits = state.habits.filter(item => item.id !== id);
+    Object.values(state.habitChecks).forEach(checks => delete checks[id]);
+
+    saveState();
+    renderHabitTracker();
+    updateProgress();
+    toast("Привычка удалена.");
+  });
+
+  /* SIX STAGES */
+
+  function renderStages() {
+    const grid = $("#stagesGrid");
+
+    grid.innerHTML = state.stages.map(stage => {
+      const checks = state.stageChecks[stage.id] || {};
+      const total = stage.tasks.length;
+      const completed = stage.tasks.filter(task => checks[task.id]).length;
+      const percent = total ? Math.round(completed / total * 100) : 0;
+
+      const tasks = stage.tasks.map(task => `
+        <label>
+          <input type="checkbox" data-stage-id="${escapeHTML(stage.id)}::${escapeHTML(task.id)}" ${checks[task.id] ? "checked" : ""}>
+          <span>${escapeHTML(task.title)}</span>
+        </label>
+      `).join("");
+
+      const imageURL = `https://images.unsplash.com/${stage.image}?auto=format&fit=crop&w=900&q=80`;
+
+      return `<article class="stage-card">
+        <div class="stage-image">
+          <img src="${imageURL}" alt="${escapeHTML(stage.title)}" loading="lazy">
+          <span class="stage-image-number">${stage.number} / 06</span>
+        </div>
+        <div class="stage-body">
+          <p class="stage-phase">${escapeHTML(stage.phase)}</p>
+          <h3>${escapeHTML(stage.title)}</h3>
+          <p>${escapeHTML(stage.description)}</p>
+          <div class="stage-checklist">${tasks}</div>
+          <div class="stage-progress"><div style="width:${percent}%"></div></div>
+          <div class="subtle" style="margin-top:8px">${completed} из ${total} задач выполнено</div>
+        </div>
+      </article>`;
+    }).join("");
+  }
+
+  /* GLOBAL PROGRESS */
+
+  function updateProgress() {
+    const checks = dayChecks();
+    const total = state.dailyTasks.length;
+    const completed = state.dailyTasks.filter(task => checks[task.id]).length;
+    const percent = total ? Math.round(completed / total * 100) : 0;
+
+    $("#progressPercent").textContent = `${percent}%`;
+    $("#completedCount").textContent = completed;
+    $("#totalCount").textContent = total;
+    $("#progressCircle").style.setProperty("--p", `${percent}%`);
+    $("#heroPercent").textContent = `${percent}%`;
+
+    const date = new Date(`${selectedDate}T12:00:00`);
+    $("#progressDateLabel").textContent = date.toLocaleDateString("ru-RU", {
+      day: "2-digit", month: "2-digit", year: "numeric"
+    });
+
+    $("#progressHeading").textContent = selectedDate === today()
+      ? "Сегодня"
+      : date.toLocaleDateString("ru-RU", { day: "numeric", month: "long" });
+
+    $("#progressMessage").textContent = percent === 100
+      ? "Все задачи на этот день выполнены. Отличная работа."
+      : percent >= 60
+        ? "Большая часть сделана. Продолжай в своём темпе."
+        : percent > 0
+          ? "Каждый маленький шаг имеет значение."
+          : "Начни с одного небольшого шага.";
+
+    const allTasks = state.categories.reduce((sum, category) => sum + category.tasks.length, 0);
+    const allCompleted = state.categories.reduce((sum, category) => {
+      const categoryChecks = state.goalChecks[category.id] || {};
+      return sum + category.tasks.filter(task => categoryChecks[task.id]).length;
+    }, 0);
+
+    // Статистика в шапке показывает дни периода Winter Arc.
+    const start = new Date("2026-10-01T12:00:00");
+    const end = new Date("2027-03-01T00:00:00");
+    const now = new Date(`${today()}T12:00:00`);
+    const passed = Math.max(0, Math.floor((now - start) / 86400000) + 1);
+    const left = Math.max(0, Math.ceil((end - now) / 86400000));
+
+    $("#daysPassed").textContent = passed;
+    $("#daysLeft").textContent = left;
+
+    // Сохраняем доступ к общему числу целей для дальнейшего расширения.
+    document.body.dataset.goalCount = String(allTasks);
+    document.body.dataset.completedGoals = String(allCompleted);
+  }
+
+  /* EXPORT AND RESET */
+
+  $("#exportData").addEventListener("click", () => {
+    const blob = new Blob([JSON.stringify(state, null, 2)], {
+      type: "application/json;charset=utf-8"
+    });
+
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `winter-arc-${today()}.json`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+    toast("Экспорт подготовлен.");
+  });
+
+  $("#resetData").addEventListener("click", () => {
+    if (!confirm("Удалить все изменения, задачи и отметки? Примеры будут восстановлены.")) return;
+
+    state = createInitialState();
+    selectedDate = today();
+
+    $("#taskDate").value = selectedDate;
+    $("#habitDate").value = selectedDate;
+
+    saveState();
+    renderAll();
+    toast("Данные сброшены.");
+  });
+
+  function renderAll() {
+    renderGoals();
+    renderDailyTasks();
+    renderHabitTracker();
+    renderStages();
+    updateProgress();
+  }
+
+  /* START */
+
+  const currentYear = new Date().getFullYear();
+  $("#headerDate").textContent = `WINTER ARC / ${currentYear}`;
+
+  renderAll();
+})();
+</script>
+</body>
+</html>
